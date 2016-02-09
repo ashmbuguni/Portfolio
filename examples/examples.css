@@ -216,7 +216,7 @@ p{
 
 
 	/* Backgrounds will cover all the section
-	* --------------------------------------- */
+	* --------------------------------------- 
 	.section{
 		background-size: cover;
 	}
@@ -232,29 +232,9 @@ p{
 		/* background-image: url(imgs/gunilogo.png); */
 		padding: 0 0 0 0;
 	}
-	#section2{
-		background-image: url(imgs/dev.jpg);
-		padding: 6% 0 0 0;
-	}
-	#section3{
-		background-image: url(imgs/design.jpg);
-		padding: 6% 0 0 0;
-	}
-	#section3 h1{
-		color: #000;
-	}
 
 
- 	/*Adding background for the slides
-	* --------------------------------------- */
-	#slide1{
-		background-image: url(imgs/develop.jpg);
-		padding: 6% 0 0 0;
-	}
-	#slide2{
-		background-image: url(imgs/bg5.jpg);
-		padding: 6% 0 0 0;
-	}
+
 	/* Bottom menu
 	* --------------------------------------- */
 	#infoMenu li a {
