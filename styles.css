@@ -9,13 +9,13 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #4f5f9b;
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: white;
 }
 a:hover {
   color: #6633ff;
@@ -25,7 +25,7 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: transparent;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -52,12 +52,12 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: #d6606e;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/chelsea.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -72,21 +72,40 @@ header .profile-image {
   border-radius: 50%;
   border: 3px solid white;
   transition: all .5s;
+
 }
+
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2);
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
 }
+
+.guni-logo {
+  position: center;
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+
+}
+
+.guni-logo:hover {
+    transform: scale(1.5) rotateY(360deg);
+}
+
 .tag {
-  background-color: #efefef;
-  color: black;
+  background-color: transparent;
+  color: white;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: transparent;
+  color: white;
 }
 .card {
   margin: 30px;
@@ -99,7 +118,8 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #a42e3e;
+  transform: scale(1.1)
 }
 
 ul.skills {
@@ -110,15 +130,12 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #a42e3e;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
-.skills li:nth-child(odd) {
-  background: #0399ff;
-}
 
 footer {
   width: 100%;
@@ -162,6 +179,7 @@ a.github {
 }
 a.social:hover {
   opacity: 1;
+  transform: scale(1.5) rotate(360deg);
 }
 .clearfix {
   clear: both;

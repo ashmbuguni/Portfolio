@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Guni - Design | Develop</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" /> -->
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	<style>
+
+		/* The percentage will be dynamically modified later by jquery. Im just going to smooth it out with a bit of CSS transition. There you go, now you can play around with that and modify it to your liking. :D  ; */
+		ul#dots { display:block; position:fixed; top:0; right:0; bottom:0; margin:0; padding-top: 20%; padding-right: 20px; width:20px; height:100%; z-index: 1000; background:none !important;}
+		ul#dots li { display:block; position:relative; /*top:0; bottom:0; right:0;*/ margin: 5px 0; width:10px; height:10px; border:2px solid #FFF; background: transparent; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; cursor: pointer; transition:all 0.3s ease-out; -moz-transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out; }
+		ul#dots li:hover,  ul#dots li.active { background: #f1c40f; border:2px solid transparent; width:10px; height:10px; }
+
+		div.section { min-height: 347px !important; display:block; position:relative; }
+		/* haha, i see the issue... Typos can throw the whole thing off course... */
+
+
+
+		.button {
+ 			position: absolute;
+ 			color: #fff;
+ 			padding: 15px 2px 0px 5px; 
+ 			top: 70%;
+ 			left: 45%;
+ 			font-weight: bold;
+ 			opacity:1; -moz-opacity:1; -webkit-opacity:1; animation:fader 2s 1; -moz-animation:fader 2s 1; -webkit-animation:fader 8s 1; }
+			@keyframes fader {
+			0% { opacity:0; }
+			30% { opacity:0; }
+			100%{ opacity:1; }
+		}
+
+			@-moz-keyframes fader {
+			0% { opacity:0; }
+			100%{ opacity:1; }
+		}
+
+			@-webkit-keyframes fader {
+			0% { opacity:0; }
+			100%{ opacity:1; }
+		}
+			}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<!-- <script type="text/javascript" src="../jquery.fullPage.js"></script> -->
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: false
+
+			});
+
+			$('#dots li').click(function() {
+				var theTarg = $(this).data('targ');
+				$('html,body').stop().animate({scrollTop:$(theTarg).offset().top},600,'swing');
+				$('#dots li').removeClass('active');
+				$(this).addClass('active');
+			})
+		});
+	</script>
+
+</head>
+<body>
+
+<a href="" id="githubLink"><img style="position: fixed;z-index:99; top: 0; right: 0; border: 0;" src="imgs/quote.png" alt="Request A Quote"></a>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+	<div class="nav">
+		<ul>
+			<li><a href="work.html"></li>LATEST WORK</a></li>
+			<li><a href="services.html"></li>SERVICES</a></li>
+			<li><a href="about.html"></li>ABOUT US</a></li>
+			<li><a href="team.html"></li>THE TEAM</a></li>								
+			<li><a href="contact.html"></li>CONTACT US</a></li>
+		</ul>
+	</div>
+
+	<!-- Im not sure what youve coded in towards it already, but im just going to set up a new block for you from scratch that will do what you are after, then you can work with it to make it blend in with the rest of your scripts -->
+
+	<!-- i see you dont have emmet plugin installed on your copy of sublime text... its worth looking into, will help you speed up coding rate! ;P -->
+
+	<ul id="dots">
+		<li data-targ="#section0" class="active"></li>
+		<li data-targ="#section1"></li>
+		<li data-targ="#section2"></li>
+		<li data-targ="#section3"></li>								
+	</ul>
+
+	<!-- Much tidier... Benefits of HTML5 -->
+
+	<!-- Then the small logo needs to be positioned here -->
+	<div class="newlogo">
+		<img src="imgs/dd.png">
+	</div>
+
+
+<div id="slider">
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<h1><img src="imgs/gunilogo.png"></h1>
+			<a href="../index.html" class="button">COMING SOON</a>
+		</div><!-- End #section0 -->
+
+			
+	</div>
+	<!-- This is why indenting is very importan. This is the correct structure, however im not sure how it will affect what styles you have added so have a quick look and check that all isgure  performing correctly.  1 sec. hmmm... very strange behaviour! Seems as though there is another function fighting against the window scroll function i wrote it, (like i explained the other day, stuff like this can happen when too many plugins clash with each other). I would personally advise you to just get rid of the fullpage plugin, and manually code that part, cause you could do it with a lot less code and it will be smoother. Up to you though as depending on your knowlege it may either be very easy or make you go crazy! Try to make it work with the plugin for now, but if its not resolving i suggest manually doing it. Better for personal practice and development too. I agree with you, Im willing to give it a go but have no idea where to start :S could you point me in the right direction so i can look into it?
+	 i couldnt tell you exactly cause i will need to look at the whole script for hat plugin to work out what the clash is. Could take quite a while. As for manually doing it, i woulod set everything to 100% height and width., and modify the minimum height to the window height with jquery. Ok I will start with that and i will probably leave the page to scroll normally rather than full page. yea, plugins are a pain in the backside, thats why nowadays i just write my own! :P okN e ways im back to work now. Clients filling up my inbox with requests. Let me know how it goes. :DThanks for your time man! No worries! Laters. :) -->
+
+
+</div>	
+</body>
+</html>
