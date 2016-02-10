@@ -44,6 +44,21 @@
 		/* background-image: url(imgs/gunilogo.png); */
 		padding: 0 0 0 0;
 	}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+	#section2{
+		background-image: url(imgs/dev.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3{
+		background-image: url(imgs/design.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+>>>>>>> Stashed changes
 
 
 
@@ -53,6 +68,10 @@
 		color: #fff;
 	}
 
+=======
+
+
+>>>>>>> parent of 7c01f05... Revert "Wholesome changes"
 /* nav css */
 
 ul {
@@ -84,7 +103,11 @@ li {
 li a {
     color: white;
     text-align: center;
+<<<<<<< HEAD
     padding: 10px 68px;
+=======
+    padding: 10px 58px;
+>>>>>>> parent of 7c01f05... Revert "Wholesome changes"
     text-decoration: none;
 }
 
@@ -102,7 +125,11 @@ li a {
 
 /* Guni Big Logo*/
 
+<<<<<<< HEAD
 #section0 h1 img { opacity:1; -moz-opacity:1; -webkit-opacity:1; animation:fader 2s 1; -moz-animation:fader 3s 1; -webkit-animation:fader 3s 1; }
+=======
+#section0 h1 img { opacity:1; -moz-opacity:1; -webkit-opacity:1; animation:fader 4s 1; -moz-animation:fader 4s 1; -webkit-animation:fader 5s 1; }
+>>>>>>> parent of 7c01f05... Revert "Wholesome changes"
 @keyframes fader {
 	0% { opacity:0; }
 	30% { opacity:0; }
@@ -130,7 +157,11 @@ li a {
 .button {
  display: block;
  height: 30px;
+<<<<<<< HEAD
  width: 160px;
+=======
+ width: 200px;
+>>>>>>> parent of 7c01f05... Revert "Wholesome changes"
  border: 2px solid;
  color: #000;
  text-align: center;
